@@ -1,0 +1,25 @@
+{
+  "name": "scientisst-javascript-library",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "repository": "https://github.com/scientisst/scientisst-javascript-library.git",
+  "author": "Rui Maciel <ruigouveiamaciel@gmail.com>",
+  "contributors": [
+    {
+      "name": "Rui Maciel",
+      "email": "ruigouveiamaciel@gmail.com",
+      "url": "https://github.com/ruigouveiamaciel"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Rui Maciel",
+      "email": "ruigouveiamaciel@gmail.com",
+      "url": "https://github.com/ruigouveiamaciel"
+    }
+  ],
+  "license": "MIT",
+  "scripts": {
+    
+  }
+}
