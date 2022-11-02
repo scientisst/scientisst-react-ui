@@ -1,12 +1,12 @@
-{
-	"extends": [
+module.exports = {
+	extends: [
 		"next/core-web-vitals",
 		"plugin:@typescript-eslint/recommended",
 		"plugin:jsdoc/recommended",
 		"prettier"
 	],
-	"parser": "@typescript-eslint/parser",
-	"plugins": [
+	parser: "@typescript-eslint/parser",
+	plugins: [
 		"@typescript-eslint",
 		"react",
 		"react-hooks",
@@ -15,7 +15,7 @@
 		"jsdoc",
 		"prettier"
 	],
-	"rules": {
+	rules: {
 		"prettier/prettier": "error"
 	}
 }
