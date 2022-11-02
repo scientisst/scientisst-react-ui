@@ -5,6 +5,7 @@
 /build
 /out
 /dist
+*.tsbuildinfo
 
 # Debug
 npm-debug.log*
