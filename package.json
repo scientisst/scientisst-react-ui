@@ -20,6 +20,7 @@
 	"license": "MIT",
 	"type": "module",
 	"scripts": {
+		"prebuild": "tsc-multi --clean",
 		"build": "tsc-multi",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix"
@@ -48,5 +49,25 @@
 		"typescript": "^4.8.4"
 	},
 	"main": "dist/index.mjs",
-	"types": "dist/index.d.ts"
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.cjs",
+			"types": "./dist/index.d.ts"
+		},
+		"./hooks": {
+			"import": "./dist/hooks/index.mjs",
+			"require": "./dist/hooks/index.cjs",
+			"types": "./dist/hooks/index.d.ts"
+		},
+		"./package.json": "./package.json"
+	},
+	"typesVersions": {
+		"*": {
+			"hooks": [
+				"dist/hooks/index.d.ts"
+			]
+		}
+	}
 }

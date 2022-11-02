@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const pluginSortImports = require("@trivago/prettier-plugin-sort-imports")
 const pluginTailwindcss = require("prettier-plugin-tailwindcss")
 

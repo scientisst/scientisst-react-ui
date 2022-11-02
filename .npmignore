@@ -1,0 +1,13 @@
+.gitignore
+.eslintrc.json
+.eslintignore
+node_modules/
+src/
+.prettierignore
+.vscode/
+prettier.config.cjs
+tsc-multi.json
+tsconfig.json
+tsconfig.cjs.tsbuildinfo
+tsconfig.mjs.tsbuildinfo
+yarn.lock
