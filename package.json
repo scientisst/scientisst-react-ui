@@ -62,13 +62,11 @@
 			"types": "./dist/hooks/index.d.ts"
 		},
 		"./eslint-config-scientisst-next": {
-			"import": "./dist/config/eslint-config-scientisst-next.mjs",
-			"require": "./dist/config/eslint-config-scientisst-next.cjs",
+			"default": "./dist/config/eslint-config-scientisst-next.cjs",
 			"types": "./dist/config/eslint-config-scientisst-next.d.ts"
 		},
 		"./prettier-config": {
-			"import": "./dist/config/prettier-config.mjs",
-			"require": "./dist/config/prettier-config.cjs",
+			"default": "./dist/config/prettier-config.cjs",
 			"types": "./dist/config/prettier-config.d.ts"
 		},
 		"./package.json": "./package.json"
