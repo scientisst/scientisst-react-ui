@@ -61,13 +61,33 @@
 			"require": "./dist/hooks/index.cjs",
 			"types": "./dist/hooks/index.d.ts"
 		},
+		"./eslint-config-scientisst-next": {
+			"import": "./dist/config/eslint-config-scientisst-next.mjs",
+			"require": "./dist/config/eslint-config-scientisst-next.cjs",
+			"types": "./dist/config/eslint-config-scientisst-next.d.ts"
+		},
+		"./prettier-config": {
+			"import": "./dist/config/prettier-config.mjs",
+			"require": "./dist/config/prettier-config.cjs",
+			"types": "./dist/config/prettier-config.d.ts"
+		},
 		"./package.json": "./package.json"
 	},
 	"typesVersions": {
 		"*": {
 			"hooks": [
 				"dist/hooks/index.d.ts"
+			],
+			"eslint-config-scientisst-next": [
+				"dist/config/eslint-config-scientisst-next.d.ts"
+			],
+			"prettier-config": [
+				"dist/config/prettier-config.d.ts"
 			]
 		}
+	},
+	"peerDependencies": {
+		"eslint": ">= 8",
+		"prettier": ">= 2"
 	}
 }

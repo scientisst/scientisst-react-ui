@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"target": "es6",
 		"lib": ["dom", "dom.iterable", "esnext", "webworker"],
-		"allowJs": false,
+		"allowJs": true,
 		"skipLibCheck": true,
 		"strict": true,
 		"forceConsistentCasingInFileNames": true,
@@ -17,6 +17,6 @@
 		"jsx": "preserve",
 		"outDir": "dist"
 	},
-	"include": ["**/*.ts", "**/*.tsx", "**/*.d.ts"],
+	"include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts", "src/**/*.js", "src/**/*.cjs"],
 	"exclude": ["node_modules", "dist"]
 }
