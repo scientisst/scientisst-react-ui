@@ -364,10 +364,10 @@
     prettier "^2.7.1"
     typescript "^4.8.4"
 
-"@scientisst/prettier-config-next@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@scientisst/prettier-config-next/-/prettier-config-next-1.0.1.tgz#4a7d3b6174560e788c1bf680b7cf6f96d8ce5af7"
-  integrity sha512-5880EBV33on9aFhjC+3ho75f5PSz6FNUbRtDmoBTyThkoBV7fnOAqxWDwFktrVoE/onLDygbtRBQU/0QUkqJbw==
+"@scientisst/prettier-config-next@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@scientisst/prettier-config-next/-/prettier-config-next-1.1.0.tgz#68f3ef6aaff5045e2cb52dd528ffbb17bc84fa5e"
+  integrity sha512-YEGnplH+xhBIlPK+OG3hHLNPdlqrME59Ifwmt3sjssNrjL2EMCNY4Zgd0ZA2x7TpM4AwxDhej16rbDZTlppucg==
   dependencies:
     "@trivago/prettier-plugin-sort-imports" "^3.4.0"
     prettier "^2.7.1"
