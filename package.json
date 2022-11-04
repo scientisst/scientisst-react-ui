@@ -59,12 +59,20 @@
 			"require": "./dist/hooks/index.cjs",
 			"types": "./dist/hooks/index.d.ts"
 		},
+		"./tailwindcss-config": {
+			"import": "./dist/tailwind.config.cjs",
+			"require": "./dist/tailwind.config.cjs",
+			"types": "./dist/tailwind.config.d.ts"
+		},
 		"./package.json": "./package.json"
 	},
 	"typesVersions": {
 		"*": {
 			"hooks": [
 				"dist/hooks/index.d.ts"
+			],
+			"tailwindcss-config": [
+				"dist/tailwind.config.d.ts"
 			]
 		}
 	},

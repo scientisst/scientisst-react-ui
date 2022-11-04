@@ -17,6 +17,13 @@
 		"jsx": "preserve",
 		"outDir": "dist"
 	},
-	"include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts", "src/**/*.js", "src/**/*.cjs"],
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.tsx",
+		"src/**/*.d.ts",
+		"src/**/*.js",
+		"src/**/*.cjs",
+		"./tailwind.config.js"
+	],
 	"exclude": ["node_modules", "dist"]
 }
