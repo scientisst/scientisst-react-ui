@@ -1,4 +1,4 @@
-const code = `
+/*
 ;(function () {
 const darkTheme =
     localStorage && localStorage.getItem("darkTheme") !== null
@@ -10,7 +10,13 @@ if (darkTheme) {
 } else {
 	document.documentElement.classList.remove("dark")
 }
-})()`
+})()
+*/
+
+// Uglified code
+const code = `
+(localStorage&&null!==localStorage.getItem("darkTheme")?"true"===localStorage.getItem("darkTheme"):window.matchMedia("(prefers-color-scheme: dark)").matches)?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark");
+`
 
 const DarkThemeScript = () => {
 	return <script dangerouslySetInnerHTML={{ __html: code }} />
