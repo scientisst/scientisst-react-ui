@@ -14,20 +14,9 @@
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
-		"jsx": "preserve",
-		"outDir": "dist",
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["src/*"]
-		}
+		"jsx": "react-jsx",
+		"outDir": "dist"
 	},
-	"include": [
-		"src/**/*.ts",
-		"src/**/*.tsx",
-		"src/**/*.d.ts",
-		"src/**/*.js",
-		"src/**/*.cjs",
-		"tailwind.config.cjs"
-	],
+	"include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts", "src/**/*.js"],
 	"exclude": ["node_modules", "dist", ".next"]
 }

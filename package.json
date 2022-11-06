@@ -19,10 +19,10 @@
 	],
 	"license": "MIT",
 	"type": "module",
+	"module": "dist/index.js",
 	"scripts": {
 		"dev": "next dev",
-		"prebuild": "yarn clean",
-		"build": "tsc-multi",
+		"build": "tsc",
 		"clean": "tsc-multi --clean",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix",
@@ -52,23 +52,20 @@
 	"types": "dist/index.d.ts",
 	"exports": {
 		".": {
-			"import": "./dist/index.mjs",
-			"require": "./dist/index.cjs",
+			"import": "./dist/index.js",
 			"types": "./dist/index.d.ts"
 		},
 		"./hooks": {
-			"import": "./dist/hooks/index.mjs",
-			"require": "./dist/hooks/index.cjs",
+			"import": "./dist/hooks/index.js",
 			"types": "./dist/hooks/index.d.ts"
 		},
 		"./tailwindcss-config": {
-			"import": "./dist/tailwind.config.cjs",
-			"require": "./dist/tailwind.config.cjs",
-			"types": "./dist/tailwind.config.d.ts"
+			"import": "./tailwind.config.cjs",
+			"require": "./tailwind.config.cjs",
+			"types": "./tailwind.config.d.cts"
 		},
 		"./dark-theme": {
-			"import": "./dist/dark-theme/index.mjs",
-			"require": "./dist/dark-theme/index.mjs",
+			"import": "./dist/dark-theme/index.js",
 			"types": "./dist/dark-theme/index.d.ts"
 		},
 		"./package.json": "./package.json"
@@ -79,7 +76,7 @@
 				"dist/hooks/index.d.ts"
 			],
 			"tailwindcss-config": [
-				"dist/tailwind.config.d.ts"
+				"tailwind.config.d.cts"
 			],
 			"dark-theme": [
 				"dist/dark-theme/index.d.ts"
