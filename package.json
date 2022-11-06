@@ -52,6 +52,7 @@
 	"main": "dist/index.mjs",
 	"types": "dist/index.d.ts",
 	"exports": {
+		"./package.json": "./package.json",
 		".": {
 			"import": "./dist/index.js",
 			"types": "./dist/index.d.ts"
@@ -69,7 +70,10 @@
 			"import": "./dist/dark-theme/index.js",
 			"types": "./dist/dark-theme/index.d.ts"
 		},
-		"./package.json": "./package.json"
+		"./components/inputs": {
+			"import": "./dist/components/inputs/index.js",
+			"types": "./dist/components/inputs/index.d.ts"
+		}
 	},
 	"typesVersions": {
 		"*": {
@@ -81,6 +85,9 @@
 			],
 			"dark-theme": [
 				"dist/dark-theme/index.d.ts"
+			],
+			"components/inputs": [
+				"dist/components/inputs/index.d.ts"
 			]
 		}
 	},
