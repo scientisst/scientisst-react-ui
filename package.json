@@ -66,6 +66,11 @@
 			"require": "./dist/tailwind.config.cjs",
 			"types": "./dist/tailwind.config.d.ts"
 		},
+		"./dark-theme": {
+			"import": "./dist/dark-theme/index.mjs",
+			"require": "./dist/dark-theme/index.mjs",
+			"types": "./dist/dark-theme/index.d.ts"
+		},
 		"./package.json": "./package.json"
 	},
 	"typesVersions": {
@@ -75,6 +80,9 @@
 			],
 			"tailwindcss-config": [
 				"dist/tailwind.config.d.ts"
+			],
+			"dark-theme": [
+				"dist/dark-theme/index.d.ts"
 			]
 		}
 	},
