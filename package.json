@@ -22,7 +22,8 @@
 	"module": "dist/index.js",
 	"scripts": {
 		"dev": "next dev",
-		"build": "tsc",
+		"prebuild": "rm -rf dist/*",
+		"build": "tsc --project tsconfig.build.json",
 		"clean": "tsc-multi --clean",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix",
