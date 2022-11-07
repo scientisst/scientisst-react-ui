@@ -1,11 +1,13 @@
 import { NextPage } from "next"
 
-import useMediaQuery from "../hooks/useMediaQuery"
+import TextButton from "../components/inputs/TextButton"
 
 const Page: NextPage = () => {
-	const matches = useMediaQuery("(min-width: 600px)")
-
-	return <>{matches ? "yes" : "no"}</>
+	return (
+		<div>
+			<TextButton size="base">asdasd</TextButton>
+		</div>
+	)
 }
 
 export default Page
