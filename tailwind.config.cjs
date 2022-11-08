@@ -30,6 +30,10 @@ module.exports = {
 			"over-background-low-dark": "rgba(255, 255, 255, 0.34)"
 		},
 		extend: {
+			fontFamily: {
+				primary: ["Lexend", "sans-serif"],
+				secondary: ["Imagine", "sans-serif"]
+			},
 			borderWidth: {
 				3: "3px"
 			},
@@ -45,6 +49,13 @@ module.exports = {
 	plugins: [
 		plugin(function ({ addBase }) {
 			addBase({
+				"*": {
+					"@apply leading-6 m-0 p-0 box-border font-primary font-normal text-over-background-highest text-base":
+						{}
+				},
+				body: {
+					"@apply bg-background": {}
+				},
 				".text-primary": {
 					"@apply text-primary-light dark:text-primary-dark": {}
 				},

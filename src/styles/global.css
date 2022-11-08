@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Lexend", sans-serif;
-	font-weight: inherit;
-	color: inherit;
-	font-size: inherit;
-	line-height: inherit;
-}
-
 /* Hide number spin buttons */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
