@@ -1,1 +1,4 @@
-export { default as useDebounce } from "./useDebounce"
+import useDebounce from "./useDebounce"
+import useMediaQuery from "./useMediaQuery"
+
+export { useDebounce, useMediaQuery }
