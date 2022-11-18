@@ -79,6 +79,10 @@
 		"./components/data-display": {
 			"import": "./dist/components/data-display/index.js",
 			"types": "./dist/components/data-display/index.d.ts"
+		},
+		"./components/navigation": {
+			"import": "./dist/components/navigation/index.js",
+			"types": "./dist/components/navigation/index.d.ts"
 		}
 	},
 	"typesVersions": {
@@ -97,6 +101,9 @@
 			],
 			"components/data-display": [
 				"dist/components/data-display/index.d.ts"
+			],
+			"components/navigation": [
+				"dist/components/navigation/index.d.ts"
 			]
 		}
 	},
