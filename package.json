@@ -77,6 +77,10 @@
 			"import": "./dist/components/inputs/index.js",
 			"types": "./dist/components/inputs/index.d.ts"
 		},
+		"./components/inputs/common": {
+			"import": "./dist/components/inputs/common/index.js",
+			"types": "./dist/components/inputs/common/index.d.ts"
+		},
 		"./components/data-display": {
 			"import": "./dist/components/data-display/index.js",
 			"types": "./dist/components/data-display/index.d.ts"
@@ -103,6 +107,9 @@
 			],
 			"components/inputs": [
 				"dist/components/inputs/index.d.ts"
+			],
+			"components/inputs/common": [
+				"dist/components/inputs/common/index.d.ts"
 			],
 			"components/data-display": [
 				"dist/components/data-display/index.d.ts"
