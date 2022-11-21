@@ -84,6 +84,10 @@
 		"./components/navigation": {
 			"import": "./dist/components/navigation/index.js",
 			"types": "./dist/components/navigation/index.d.ts"
+		},
+		"./components/utils": {
+			"import": "./dist/components/utils/index.js",
+			"types": "./dist/components/utils/index.d.ts"
 		}
 	},
 	"typesVersions": {
@@ -105,6 +109,9 @@
 			],
 			"components/navigation": [
 				"dist/components/navigation/index.d.ts"
+			],
+			"components/utils": [
+				"dist/components/utils/index.d.ts"
 			]
 		}
 	},
