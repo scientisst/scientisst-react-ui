@@ -18,17 +18,16 @@ const ImageAnchor: React.FC<ImageAnchorProps> = ({
 	...props
 }) => {
 	return (
-		<Link href={href}>
-			<a
-				className={clsx(
-					"flex items-center justify-center leading-none motion-safe:hover:scale-hover motion-safe:active:scale-pressed",
-					className
-				)}
-				aria-label={ariaLabel}
-				{...props}
-			>
-				{children}
-			</a>
+		<Link
+			href={href}
+			className={clsx(
+				"flex items-center justify-center leading-none motion-safe:hover:scale-hover motion-safe:active:scale-pressed",
+				className
+			)}
+			aria-label={ariaLabel}
+			{...props}
+		>
+			{children}
 		</Link>
 	)
 }
