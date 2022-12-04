@@ -273,18 +273,18 @@ const useLiveD3Chart = ({
 		}
 	}, [parentElement])
 
-	useEffect(() => {
-		const worker = new Worker(
-			new URL("./downsamplingWorker.js", import.meta.url)
-		)
-		setDownsamplerWorker(worker)
+	// useEffect(() => {
+	// 	const worker = new Worker(
+	// 		new URL("./downsamplingWorker.js", import.meta.url)
+	// 	)
+	// 	setDownsamplerWorker(worker)
 
-		return () => {
-			if (worker) {
-				worker.terminate()
-			}
-		}
-	}, [])
+	// 	return () => {
+	// 		if (worker) {
+	// 			worker.terminate()
+	// 		}
+	// 	}
+	// }, [])
 
 	useEffect(() => {
 		if (
