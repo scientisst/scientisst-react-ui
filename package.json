@@ -1,6 +1,6 @@
 {
 	"name": "@scientisst/react-ui",
-	"version": "0.2.1",
+	"version": "0.3.1",
 	"repository": "https://github.com/scientisst/scientisst-react-ui.git",
 	"author": "Rui Maciel <ruigouveiamaciel@gmail.com>",
 	"contributors": [
@@ -18,11 +18,12 @@
 		}
 	],
 	"license": "MIT",
-	"type": "module",
 	"scripts": {
 		"dev": "next dev",
 		"prebuild": "rm -rf dist/*",
-		"build": "tsc --project tsconfig.build.json",
+		"build": "yarn build:cjs && yarn build:esm",
+		"build:cjs": "tsc --project tsconfig.build-cjs.json",
+		"build:esm": "tsc --project tsconfig.build-esm.json",
 		"prepublish": "yarn build",
 		"clean": "tsc-multi --clean",
 		"lint": "eslint .",
@@ -59,77 +60,90 @@
 		"tsc-multi": "^0.6.1",
 		"typescript": "^4.8.4"
 	},
-	"main": "dist/index.mjs",
-	"types": "dist/index.d.ts",
 	"exports": {
 		"./package.json": "./package.json",
 		"./hooks": {
-			"import": "./dist/hooks/index.js",
-			"types": "./dist/hooks/index.d.ts"
+			"import": "./dist/esm/src/hooks/index.js",
+			"types": "./dist/esm/src/hooks/index.d.ts",
+			"require": "./dist/cjs/src/hooks/index.js"
 		},
 		"./tailwindcss-config": {
-			"import": "./tailwind.config.cjs",
-			"require": "./tailwind.config.cjs",
-			"types": "./tailwind.config.d.cts"
+			"import": "./dist/esm/tailwind.config.js",
+			"types": "./dist/esm/tailwind.config.d.ts",
+			"require": "./dist/cjs/tailwind.config.js"
 		},
 		"./dark-theme": {
-			"import": "./dist/dark-theme/index.js",
-			"types": "./dist/dark-theme/index.d.ts"
+			"import": "./dist/esm/src/dark-theme/index.js",
+			"types": "./dist/esm/src/dark-theme/index.d.ts",
+			"require": "./dist/cjs/src/dark-theme/index.js"
 		},
 		"./components/inputs": {
-			"import": "./dist/components/inputs/index.js",
-			"types": "./dist/components/inputs/index.d.ts"
+			"import": "./dist/esm/src/components/inputs/index.js",
+			"types": "./dist/esm/src/components/inputs/index.d.ts",
+			"require": "./dist/cjs/src/components/inputs/index.js"
 		},
 		"./components/inputs/common": {
-			"import": "./dist/components/inputs/common/index.js",
-			"types": "./dist/components/inputs/common/index.d.ts"
+			"import": "./dist/esm/src/components/inputs/common/index.js",
+			"types": "./dist/esm/src/components/inputs/common/index.d.ts",
+			"require": "./dist/cjs/src/components/inputs/common/index.js"
 		},
 		"./components/data-display": {
-			"import": "./dist/components/data-display/index.js",
-			"types": "./dist/components/data-display/index.d.ts"
+			"import": "./dist/esm/src/components/data-display/index.js",
+			"types": "./dist/esm/src/components/data-display/index.d.ts",
+			"require": "./dist/cjs/src/components/data-display/index.js"
 		},
 		"./components/navigation": {
-			"import": "./dist/components/navigation/index.js",
-			"types": "./dist/components/navigation/index.d.ts"
+			"import": "./dist/esm/src/components/navigation/index.js",
+			"types": "./dist/esm/src/components/navigation/index.d.ts",
+			"require": "./dist/cjs/src/components/navigation/index.js"
 		},
 		"./components/utils": {
-			"import": "./dist/components/utils/index.js",
-			"types": "./dist/components/utils/index.d.ts"
+			"import": "./dist/esm/src/components/utils/index.js",
+			"types": "./dist/esm/src/components/utils/index.d.ts",
+			"require": "./dist/cjs/src/components/utils/index.js"
 		}
 	},
 	"typesVersions": {
 		"*": {
 			"hooks": [
-				"dist/hooks/index.d.ts"
+				"dist/esm/src/hooks/index.d.ts",
+				"dist/cjs/src/hooks/index.d.ts"
 			],
 			"tailwindcss-config": [
-				"tailwind.config.d.cts"
+				"dist/esm/src/tailwind.config.d.ts",
+				"dist/cjs/src/tailwind.config.d.ts"
 			],
 			"dark-theme": [
-				"dist/dark-theme/index.d.ts"
+				"dist/esm/src/dark-theme/index.d.ts",
+				"dist/cjs/src/dark-theme/index.d.ts"
 			],
 			"components/inputs": [
-				"dist/components/inputs/index.d.ts"
+				"dist/esm/src/components/inputs/index.d.ts",
+				"dist/cjs/src/components/inputs/index.d.ts"
 			],
 			"components/inputs/common": [
-				"dist/components/inputs/common/index.d.ts"
+				"dist/esm/src/components/inputs/common/index.d.ts",
+				"dist/cjs/src/components/inputs/common/index.d.ts"
 			],
 			"components/data-display": [
-				"dist/components/data-display/index.d.ts"
+				"dist/esm/src/components/data-display/index.d.ts",
+				"dist/cjs/src/components/data-display/index.d.ts"
 			],
 			"components/navigation": [
-				"dist/components/navigation/index.d.ts"
+				"dist/esm/src/components/navigation/index.d.ts",
+				"dist/cjs/src/components/navigation/index.d.ts"
 			],
 			"components/utils": [
-				"dist/components/utils/index.d.ts"
+				"dist/esm/src/components/utils/index.d.ts",
+				"dist/cjs/src/components/utils/index.d.ts"
 			]
 		}
 	},
 	"peerDependencies": {
+		"formik": ">= 2.2.9",
+		"next": ">= 13",
 		"react": ">= 18.2.0",
 		"react-dom": ">= 18.2.0",
-		"tailwindcss": ">= 3.2.1",
-		"next": ">= 13",
-		"formik": ">= 2.2.9"
+		"tailwindcss": ">= 3.2.1"
 	}
 }

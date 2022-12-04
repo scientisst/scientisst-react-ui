@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"target": "es6",
+		"target": "es5",
 		"lib": ["dom", "dom.iterable", "esnext", "webworker"],
 		"allowJs": true,
 		"skipLibCheck": true,
@@ -17,6 +17,12 @@
 		"jsx": "preserve",
 		"outDir": "dist"
 	},
-	"include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts", "src/**/*.js"],
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.tsx",
+		"src/**/*.d.ts",
+		"src/**/*.js",
+		"tailwind.config.js"
+	],
 	"exclude": ["node_modules", "dist", ".next"]
 }
