@@ -12,3 +12,8 @@ tsconfig.cjs.tsbuildinfo
 tsconfig.mjs.tsbuildinfo
 yarn.lock
 .github/
+.next/
+public/
+next-env.d.ts
+postcss.config.cjs
+tsconfig.build.json
