@@ -1,9 +1,11 @@
 import { ReactNode, useCallback, useEffect, useRef, useState } from "react"
 
 import clsx from "clsx"
-import { time } from "console"
-import * as d3 from "d3"
 
+let d3: typeof import("d3") | false = false
+import("d3").then(d3Module => {
+	d3 = d3Module
+})
 export interface LiveChartOptions {
 	className?: string
 	style?: React.CSSProperties
@@ -58,7 +60,7 @@ const useLiveD3Chart = ({
 	const lastDownsampling = useRef<number>(0)
 
 	const redraw = useCallback(() => {
-		if (canvasElement) {
+		if (canvasElement && d3) {
 			const scaledWidth = width * pixelRatio
 			const scaledHeight = height * pixelRatio
 
