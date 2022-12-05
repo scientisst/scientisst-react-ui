@@ -19,7 +19,6 @@
 	],
 	"license": "MIT",
 	"scripts": {
-		"dev": "next dev",
 		"prebuild": "rm -rf dist/*",
 		"build": "yarn build:cjs && yarn build:esm",
 		"build:cjs": "tsc --project tsconfig.build-cjs.json",
