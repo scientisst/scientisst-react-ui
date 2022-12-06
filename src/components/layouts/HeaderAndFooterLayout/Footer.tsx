@@ -1,6 +1,7 @@
 import { ReactNode } from "react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import clsx from "clsx"
 
 import { ImageAnchor } from "../../navigation"
 import FooterLinkSection, { FooterLinkSectionProps } from "./FooterLinkSection"
@@ -65,19 +66,28 @@ const Footer: React.FC<FooterProps> = ({
 					{!!sectionA && (
 						<FooterLinkSection
 							{...sectionA}
-							className="flex sm:hidden xl:flex"
+							className={clsx(
+								"flex sm:hidden xl:flex",
+								sectionA.className
+							)}
 						/>
 					)}
 					{!!sectionB && (
 						<FooterLinkSection
 							{...sectionB}
-							className="flex sm:hidden xl:flex"
+							className={clsx(
+								"flex sm:hidden xl:flex",
+								sectionB.className
+							)}
 						/>
 					)}
 					{!!sectionC && (
 						<FooterLinkSection
 							{...sectionC}
-							className="flex sm:hidden xl:flex"
+							className={clsx(
+								"flex sm:hidden xl:flex",
+								sectionC.className
+							)}
 						/>
 					)}
 					{!!sponsorLinks && (
