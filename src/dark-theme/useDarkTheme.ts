@@ -14,6 +14,21 @@ const useDarkTheme = () => {
 		}
 	}, [darkPreference])
 
+	useEffect(() => {
+		const observer = new MutationObserver(() => {
+			setDarkTheme(document.documentElement.classList.contains("dark"))
+		})
+
+		observer.observe(document.documentElement, {
+			attributes: true,
+			attributeFilter: ["class"]
+		})
+
+		return () => {
+			observer.disconnect()
+		}
+	}, [])
+
 	return darkTheme
 }
 
