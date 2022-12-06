@@ -101,6 +101,11 @@
 			"import": "./dist/esm/src/components/utils/index.js",
 			"types": "./dist/esm/src/components/utils/index.d.ts",
 			"require": "./dist/cjs/src/components/utils/index.js"
+		},
+		"./components/layouts": {
+			"import": "./dist/esm/src/components/layouts/index.js",
+			"types": "./dist/esm/src/components/layouts/index.d.ts",
+			"require": "./dist/cjs/src/components/layouts/index.js"
 		}
 	},
 	"typesVersions": {
@@ -136,6 +141,10 @@
 			"components/utils": [
 				"dist/esm/src/components/utils/index.d.ts",
 				"dist/cjs/src/components/utils/index.d.ts"
+			],
+			"components/layouts": [
+				"dist/esm/src/components/layouts/index.d.ts",
+				"dist/cjs/src/components/layouts/index.d.ts"
 			]
 		}
 	},
