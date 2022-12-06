@@ -115,7 +115,7 @@ const ButtonCheckboxGroup: React.FC<ButtonCheckboxGroupProps & FieldProps> = ({
 								{
 									["bg-primary text-over-primary-highest"]:
 										checked,
-									["border-primary bg-background text-over-background-highest w-10 border-3"]:
+									["border-primary bg-background text-over-background-highest border-3"]:
 										!checked
 								}
 							)}
