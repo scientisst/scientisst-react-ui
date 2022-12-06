@@ -14,7 +14,7 @@ const InputLabel: React.FC<InputLabelProps> = ({
 	return children ? (
 		<label
 			className={clsx(
-				"imagine-font truncate text-2xl",
+				"truncate font-secondary text-2xl",
 				center ? "text-center" : ""
 			)}
 			htmlFor={htmlFor}
