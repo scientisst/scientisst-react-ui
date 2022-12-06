@@ -50,11 +50,11 @@ module.exports = {
 		plugin(function ({ addBase }) {
 			addBase({
 				"*": {
-					"@apply leading-6 m-0 p-0 box-border font-primary font-normal text-over-background-highest text-base":
+					"@apply leading-6 m-0 p-0 box-border font-primary font-normal text-base":
 						{}
 				},
 				body: {
-					"@apply bg-background": {}
+					"@apply bg-background text-over-background-highest": {}
 				},
 				".text-primary": {
 					"@apply text-primary-light dark:text-primary-dark": {}
