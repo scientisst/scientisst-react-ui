@@ -13,6 +13,7 @@ export interface TextButtonProps {
 	onClick?: React.ComponentPropsWithoutRef<"button">["onClick"]
 	onBlur?: React.ComponentPropsWithoutRef<"button">["onBlur"]
 	onFocus?: React.ComponentPropsWithoutRef<"button">["onFocus"]
+	disabled?: boolean
 }
 
 const sizeToClassName: Record<TextButtonSize, string> = {
@@ -21,17 +22,21 @@ const sizeToClassName: Record<TextButtonSize, string> = {
 }
 
 const TextButton = forwardRef<HTMLButtonElement, TextButtonProps>(
-	({ children, size, className, ...props }, ref) => {
+	({ children, size, className, disabled, ...props }, ref) => {
 		return (
 			<button
 				className={clsx(
 					"flex items-center justify-center rounded-lg font-medium uppercase",
 					"motion-safe:hover:scale-hover motion-safe:active:scale-pressed",
 					"bg-primary text-over-primary-highest",
+					{
+						"pointer-events-none opacity-50": disabled
+					},
 					sizeToClassName[size],
 					className
 				)}
 				ref={ref}
+				disabled={disabled}
 				{...props}
 			>
 				{children}
