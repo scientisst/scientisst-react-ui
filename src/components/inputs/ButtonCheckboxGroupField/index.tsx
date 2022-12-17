@@ -13,10 +13,10 @@ interface ButtonCheckboxGroupProps {
 	center?: boolean
 	options: Array<{
 		name: string
-		value: string
+		value: string | number
 		ariaLabel?: string
 	}>
-	image?: (hovered: string) => React.ReactNode
+	image?: (hovered: string | number) => React.ReactNode
 }
 
 const ButtonCheckboxGroup: React.FC<ButtonCheckboxGroupProps & FieldProps> = ({
@@ -30,12 +30,12 @@ const ButtonCheckboxGroup: React.FC<ButtonCheckboxGroupProps & FieldProps> = ({
 	center,
 	image
 }) => {
-	const [hovered, setHovered] = useState<string>("")
+	const [hovered, setHovered] = useState<string | number>("")
 	const { setFieldValue } = useFormikContext()
 	const hasError = !!(touched[field.name] && errors[field.name])
 
 	const isChecked = useCallback(
-		(channelValue: string) => {
+		(channelValue: string | number) => {
 			return (
 				Array.isArray(field.value) && field.value.includes(channelValue)
 			)
@@ -44,7 +44,7 @@ const ButtonCheckboxGroup: React.FC<ButtonCheckboxGroupProps & FieldProps> = ({
 	)
 
 	const toggleChannel = useCallback(
-		(channelValue: string) => {
+		(channelValue: string | number) => {
 			if (isChecked(channelValue)) {
 				setFieldValue(
 					field.name,

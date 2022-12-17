@@ -13,7 +13,7 @@ interface ButtonRadioGroupProps {
 	style?: React.CSSProperties
 	options: Array<{
 		name: string
-		value: string
+		value: string | number
 		ariaLabel?: string
 	}>
 }
